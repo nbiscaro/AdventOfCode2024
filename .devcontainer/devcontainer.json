@@ -1,0 +1,34 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/rust
+{
+	"name": "Rust Dev Environment",
+	"image": "mcr.microsoft.com/devcontainers/rust:1-1-bullseye",
+	// Persist the cargo cache to avoid re-downloading dependencies every time
+	"mounts": [
+		{
+			"source": "devcontainer-cargo-cache-${devcontainerId}",
+			"target": "/usr/local/cargo",
+			"type": "volume"
+		}
+	],
+	// Add Rust-specific tools like clippy, rustfmt, and cargo-watch
+	"postCreateCommand": "rustup component add clippy rustfmt && cargo install cargo-watch",
+	// Configure tool-specific properties
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"rust-lang.rust-analyzer", // Rust language server
+				"vadimcn.vscode-lldb", // Debugger for Rust
+				"editorconfig.editorconfig" // EditorConfig support
+			],
+			"settings": {
+				"editor.formatOnSave": true, // Automatically format on save
+				"editor.tabSize": 4 // Use tab size of 4 for Rust code
+			}
+		}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally
+	"forwardPorts": [],
+	// Connect as a non-root user for security
+	"remoteUser": "vscode"
+}
