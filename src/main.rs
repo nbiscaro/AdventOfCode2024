@@ -14,14 +14,21 @@ fn main() {
         }
     };
 
-    fnSolvePart1(&lines);
-    fnSolvePart2(&lines);
+    let part_1_answer = solve_part_1(&lines);
+    println!("Part 1 answer: {}", part_1_answer);
+
+    let part_2_answer = solve_part_2(&lines);
+    println!("Part 2 answer: {}", part_2_answer);
 }
 
-fn solvePart1(input: &Vec<String>) {
+fn solve_part_1(input: &Vec<String>) {
     // Your part 1 solution goes here
+    let mut answer = 0;
+    answer.to_string();
 }
 
-fn solvePart2(input &Vec <String>) {
+fn solve_part_2(input: &Vec<String>) {
     // Your part 2 solutuon goes here
+    let mut answer = 0;
+    answer.to_string();
 }
