@@ -13,4 +13,15 @@ fn main() {
             return;
         }
     };
+
+    fnSolvePart1(&lines);
+    fnSolvePart2(&lines);
+}
+
+fn solvePart1(input: &Vec<String>) {
+    // Your part 1 solution goes here
+}
+
+fn solvePart2(input &Vec <String>) {
+    // Your part 2 solutuon goes here
 }
